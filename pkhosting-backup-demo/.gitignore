@@ -1,0 +1,16 @@
+# Configuration with secrets
+config/backup.conf
+
+# Backup data
+backups/
+!backups/.gitkeep
+
+# Docker
+*.log
+
+# OS / editor
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/

@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: pkhosting-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass123
+      MYSQL_DATABASE: sample_site
+      MYSQL_USER: siteuser
+      MYSQL_PASSWORD: sitepass123
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sample-site/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "3307:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-prootpass123"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    image: php:8.2-apache
+    container_name: pkhosting-web
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    volumes:
+      - ./sample-site:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_NAME: sample_site
+      DB_USER: siteuser
+      DB_PASS: sitepass123
+
+volumes:
+  db_data:

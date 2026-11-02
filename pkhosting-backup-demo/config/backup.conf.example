@@ -1,0 +1,26 @@
+# PKHosting Backup Configuration
+# Copy this file to backup.conf and adjust values for your environment.
+# NEVER commit backup.conf (it may contain credentials).
+
+# ---------- Paths ----------
+# Where backups will be stored (should be on a different disk/volume if possible)
+BACKUP_ROOT="/home/workdir/artifacts/pkhosting-backup-demo/backups"
+
+# Path to the website files that should be backed up
+SITE_ROOT="/home/workdir/artifacts/pkhosting-backup-demo/sample-site"
+
+# How many successful backups to keep
+RETENTION_COUNT=7
+
+# ---------- Database ----------
+DB_CONTAINER="pkhosting-db"          # Docker container name (preferred)
+DB_HOST="127.0.0.1"                  # Used only if container is not running
+DB_PORT="3307"
+DB_NAME="sample_site"
+DB_USER="siteuser"
+DB_PASS="sitepass123"
+
+# ---------- Alerts ----------
+# Leave empty to disable that method
+ALERT_EMAIL=""                       # e.g. admin@example.com
+ALERT_WEBHOOK=""                     # e.g. Slack/Discord webhook URL
