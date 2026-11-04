@@ -4,10 +4,10 @@
 
 # ---------- Paths ----------
 # Where backups will be stored (should be on a different disk/volume if possible)
-BACKUP_ROOT="/home/workdir/artifacts/pkhosting-backup-demo/backups"
+BACKUP_ROOT="$HOME/pkhosting-backups"
 
 # Path to the website files that should be backed up
-SITE_ROOT="/home/workdir/artifacts/pkhosting-backup-demo/sample-site"
+SITE_ROOT="/mnt/c/Users/lenovo/Downloads/pkhosting-backup-demo/pkhosting-backup-demo/sample-site"
 
 # How many successful backups to keep
 RETENTION_COUNT=7

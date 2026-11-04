@@ -76,7 +76,7 @@ log "Backing up MySQL database '${DB_NAME}' ..."
 # Prefer docker exec if the db container is running
 if docker ps --format '{{.Names}}' | grep -q "^${DB_CONTAINER:-pkhosting-db}$"; then
     docker exec "${DB_CONTAINER:-pkhosting-db}" \
-        mysqldump -u"${DB_USER}" -p"${DB_PASS}" --single-transaction --routines --triggers "${DB_NAME}" \
+        mysqldump --no-tablespaces -u"${DB_USER}" -p"${DB_PASS}" --single-transaction --routines --triggers "${DB_NAME}" \
         > "${BACKUP_DIR}/database.sql" \
         || fail "mysqldump via docker failed"
 else

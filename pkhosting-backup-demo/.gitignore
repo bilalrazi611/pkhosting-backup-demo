@@ -14,3 +14,7 @@ backups/
 *~
 .idea/
 .vscode/
+config/backup.conf
+backups/
+*.log
+.env
