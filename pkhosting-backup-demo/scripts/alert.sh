@@ -56,7 +56,7 @@ fi
 # -------------------------------------------------------
 if [[ -n "$ALERT_WEBHOOK" ]]; then
     if command -v curl >/dev/null 2>&1; then
-        curl -s -X POST -H "Content-Type: application/json" \
+        curl -s --max-time 15 -X POST -H "Content-Type: application/json" \
             -d "{\"text\":\"*${SUBJECT}*\n${BODY}\"}" \
             "$ALERT_WEBHOOK" >/dev/null \
             && log_alert "Webhook notification sent" \
