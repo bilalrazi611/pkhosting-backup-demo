@@ -93,6 +93,18 @@ gzip "${BACKUP_DIR}/database.sql" \
 
 log "Database backup complete: $(du -h "${BACKUP_DIR}/database.sql.gz" | cut -f1)"
 
+# Record database row counts so a restore can be verified against them.
+db_query() {
+    if docker ps --format '{{.Names}}' 2>/dev/null | grep -q "^${DB_CONTAINER:-pkhosting-db}$"; then
+        docker exec "${DB_CONTAINER:-pkhosting-db}" mysql -u"${DB_USER}" -p"${DB_PASS}" -N -e "$1" "${DB_NAME}" 2>/dev/null
+    else
+        mysql -h"${DB_HOST:-127.0.0.1}" -P"${DB_PORT:-3307}" -u"${DB_USER}" -p"${DB_PASS}" -N -e "$1" "${DB_NAME}" 2>/dev/null
+    fi
+}
+POST_COUNT="$(db_query "SELECT COUNT(*) FROM posts;" || echo "unknown")"
+VISIT_COUNT="$(db_query "SELECT visit_count FROM stats WHERE id=1;" || echo "unknown")"
+log "Database content at backup time: ${POST_COUNT} posts, visit count ${VISIT_COUNT}"
+
 # -------------------------------------------------------
 # 3. Write metadata
 # -------------------------------------------------------
@@ -104,6 +116,8 @@ Site Root:      ${SITE_ROOT}
 Database:       ${DB_NAME}
 Files Size:     $(du -h "${BACKUP_DIR}/files.tar.gz" | cut -f1)
 DB Size:        $(du -h "${BACKUP_DIR}/database.sql.gz" | cut -f1)
+Posts:          ${POST_COUNT}
+Visit count:    ${VISIT_COUNT}
 EOF
 
 log "Metadata written."

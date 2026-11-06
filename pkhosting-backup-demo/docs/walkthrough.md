@@ -106,3 +106,49 @@ The script should fail, clean up the partial backup, and invoke `alert.sh` (emai
 5. Failure alert + operational runbook provided  
 
 All scripts and configuration are contained in this repository with a clear README and no secrets committed.
+
+---
+
+## Round 6 proof run (6 November 2026)
+
+This section records the proof run that answers the Round 6 review: a real-server backup and restore with `time` output, a prune-to-7 log, and a failed-backup alert arriving, on a new commit.
+
+- Proof workflow: `.github/workflows/backup-proof.yml`, run on a GitHub-hosted Ubuntu VM with the repo's own Docker Compose stack (PHP 8.2 + MySQL 8.0).
+- Run: https://github.com/pakmultilinks-dot/pkhosting-backup-demo/actions/runs/42210470035
+- Commit: e6a64fa ("Round 6 fix: set scripts executable in CI before the proof runs")
+- Conclusion: success, 56 seconds, 6 November 2026 16:28 PKT.
+- Full log and artifacts: `docs/proof-run-2/` (run2-full-log.txt, run2-summary.md, backup-proof-logs/).
+
+### RUN 1, timed backup
+
+- Backup pkhosting_backup_20261106_112853, exit 0, real 0m0.351s.
+- 3 posts, visit count 4 at backup time; files 4.0K, DB 4.0K.
+
+### RUN 2, timed restore with verification
+
+- Posts after deliberate DELETE of post 3: 2.
+- Restore exit 0, real 0m0.381s.
+- Restore self-check: posts expected 3, restored 3; visit count expected 4, restored 4. Database check OK, Files check OK.
+- Posts after restore: 3. File list check: FILES-MATCH.
+
+### RUN 3, prune to 7
+
+- 10 backups before the new backup (9 seeded old backups plus 1 real backup).
+- The backup run found 11 backups and removed the oldest 4 (20261028 to 20261031).
+- Backups after prune: 7.
+
+### RUN 4, failed backup, alert must arrive
+
+- Failed-backup exit 1, caused by a wrong DB password in the config.
+- Backups still 7, partial backup directory cleaned up.
+- backup.log shows: "ALERT: Webhook notification sent" and "ALERT: PKHosting Backup FAILED | mysqldump via docker failed".
+- The alert arrived at the webhook inbox https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a: exactly 1 POST at 11:28:55, body "*PKHosting Backup FAILED* / mysqldump via docker failed". This was checked by reading the inbox directly, not only from the run log.
+
+### RUN 5, cron line install
+
+- Install command ran, crontab exit 0. Daily line: `15 2 * * * .../scripts/backup.sh`.
+- Honest caveat: the runner log does NOT show the crontab -l printout, so the daily schedule is proven only by the install command exiting 0 plus the cron line in the workflow and runbook. The crontab -l output was not captured in this run.
+
+### Note on script permissions
+
+The scripts are stored non-executable (100644) in the repository, including in the original repo, so anyone running them the normal way hits "Permission denied" (this is what failed proof run 1, exit 126). The CI workflow therefore runs `chmod +x scripts/backup.sh scripts/restore.sh scripts/alert.sh` before the proof runs. This is a workaround for the stored permissions, and the maintainer may prefer to commit the scripts as executable instead.

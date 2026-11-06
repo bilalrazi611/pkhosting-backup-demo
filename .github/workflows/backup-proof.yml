@@ -1,0 +1,126 @@
+# Round 6 fix: set scripts executable in CI before the proof runs
+
+name: Backup proof run
+
+on:
+  push:
+    paths:
+      - 'pkhosting-backup-demo/**'
+      - '.github/workflows/backup-proof.yml'
+  workflow_dispatch:
+
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Create a fresh webhook inbox for the failure alert
+        id: webhook
+        run: |
+          UUID=$(curl -s -X POST "https://webhook.site/token" -H "Content-Type: application/json" -d '{}' | python3 -c "import json,sys; print(json.load(sys.stdin)['uuid'])")
+          echo "uuid=$UUID" >> "$GITHUB_OUTPUT"
+          echo "WEBHOOK_URL=https://webhook.site/$UUID" >> "$GITHUB_ENV"
+          echo "Webhook inbox (open in a browser to see the alert arrive): https://webhook.site/$UUID"
+
+      - name: Start the sample stack (Docker Compose)
+        working-directory: pkhosting-backup-demo
+        run: docker compose up -d --wait
+
+      - name: Show the site and move the visit counter
+        run: |
+          curl -s http://localhost:8080 | head -20
+          curl -s http://localhost:8080 > /dev/null
+          curl -s http://localhost:8080 > /dev/null
+          curl -s http://localhost:8080 > /dev/null
+          echo "Visit count after 4 page loads:"
+          docker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT visit_count FROM stats WHERE id=1;" sample_site
+
+      - name: Create backup config
+        working-directory: pkhosting-backup-demo
+        run: |
+          cp config/backup.conf.example config/backup.conf
+          sed -i "s|^BACKUP_ROOT=.*|BACKUP_ROOT=\"$GITHUB_WORKSPACE/pkhosting-backups\"|" config/backup.conf
+          sed -i "s|^ALERT_WEBHOOK=.*|ALERT_WEBHOOK=\"$WEBHOOK_URL\"|" config/backup.conf
+          cat config/backup.conf
+
+      - name: Make the scripts executable
+        working-directory: pkhosting-backup-demo
+        run: chmod +x scripts/backup.sh scripts/restore.sh scripts/alert.sh
+
+      - name: RUN 1 - timed backup
+        working-directory: pkhosting-backup-demo
+        run: |
+          time ./scripts/backup.sh
+          echo "backup exit: $?"
+          ls -la "$GITHUB_WORKSPACE/pkhosting-backups/"
+          cat "$GITHUB_WORKSPACE/pkhosting-backups/pkhosting_backup_"*/metadata.txt
+          echo "Posts at backup time:"
+          docker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT COUNT(*) FROM posts;" sample_site
+          echo "Visit count at backup time:"
+          docker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT visit_count FROM stats WHERE id=1;" sample_site
+
+      - name: RUN 2 - timed restore with verification
+        working-directory: pkhosting-backup-demo
+        run: |
+          docker exec pkhosting-db mysql -usiteuser -psitepass123 -e "DELETE FROM posts WHERE id=3;" sample_site
+          echo "Posts after deliberate DELETE (expect 2):"
+          docker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT COUNT(*) FROM posts;" sample_site
+          B=$(ls "$GITHUB_WORKSPACE/pkhosting-backups/" | grep pkhosting_backup_ | head -n 1)
+          echo "Restoring backup: $B"
+          time ./scripts/restore.sh "$B" <<< "yes"
+          echo "restore exit: $?"
+          echo "Posts after restore (expect 3):"
+          docker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT COUNT(*) FROM posts;" sample_site
+          echo "Visit count after restore (expect the backup-time value):"
+          docker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT visit_count FROM stats WHERE id=1;" sample_site
+          echo "File check (expect FILES-MATCH):"
+          diff <(tar -tzf "$GITHUB_WORKSPACE/pkhosting-backups/$B/files.tar.gz" | grep -v '/$' | sort) <(cd sample-site && find . -type f | sed 's|^\./|sample-site/|' | sort) && echo FILES-MATCH
+
+      - name: RUN 3 - prune to 7
+        working-directory: pkhosting-backup-demo
+        run: |
+          cd "$GITHUB_WORKSPACE/pkhosting-backups"
+          for d in 20261028_020000 20261029_020000 20261030_020000 20261031_020000 20261101_020000 20261102_020000 20261103_020000 20261104_020000 20261105_020000; do mkdir -p "pkhosting_backup_$d"; echo "old backup $d" > "pkhosting_backup_$d/metadata.txt"; done
+          echo "Backups before prune (expect 10):"
+          ls -d pkhosting_backup_* | wc -l
+          cd "$GITHUB_WORKSPACE/pkhosting-backup-demo"
+          ./scripts/backup.sh
+          echo "backup exit: $?"
+          echo "Backups after prune (expect 7):"
+          ls -d "$GITHUB_WORKSPACE/pkhosting-backups/pkhosting_backup_"* | wc -l
+          ls "$GITHUB_WORKSPACE/pkhosting-backups/"
+
+      - name: RUN 4 - failed backup, alert must arrive
+        working-directory: pkhosting-backup-demo
+        run: |
+          sed -i 's/^DB_PASS="sitepass123"/DB_PASS="wrongpass"/' config/backup.conf
+          grep '^DB_PASS' config/backup.conf
+          set +e
+          ./scripts/backup.sh
+          echo "failed-backup exit (expect 1): $?"
+          set -e
+          sed -i 's/^DB_PASS="wrongpass"/DB_PASS="sitepass123"/' config/backup.conf
+          echo "Backups still 7 (partial dir cleaned):"
+          ls -d "$GITHUB_WORKSPACE/pkhosting-backups/pkhosting_backup_"* | wc -l
+          echo "Alert lines in backup.log:"
+          grep -i "ALERT" "$GITHUB_WORKSPACE/pkhosting-backups/backup.log"
+          sleep 5
+          echo "Requests that arrived at the webhook inbox (expect 1 alert):"
+          curl -s "https://webhook.site/token/${{ steps.webhook.outputs.uuid }}/requests" | python3 -c "import json,sys; d=json.load(sys.stdin); print('total:', d.get('total', len(d.get('data', [])))); [print(r.get('method'), r.get('created_at'), (r.get('content') or '')[:200]) for r in d.get('data', [])]"
+
+      - name: RUN 5 - cron line install
+        run: |
+          (crontab -l 2>/dev/null; echo "15 2 * * * $GITHUB_WORKSPACE/pkhosting-backup-demo/scripts/backup.sh >> $GITHUB_WORKSPACE/pkhosting-backups/cron.log 2>&1") | crontab -
+          echo "crontab exit: $?"
+          crontab -l
+
+      - name: Upload run logs as artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: backup-proof-logs
+          path: |
+            pkhosting-backups/backup.log
+            pkhosting-backups/pkhosting_backup_*/metadata.txt

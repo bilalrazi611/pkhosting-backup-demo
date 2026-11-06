@@ -136,6 +136,36 @@ fi
 
 log "Database restored."
 
+# -------------------------------------------------------
+# 3. Verify restore against the backup metadata
+# -------------------------------------------------------
+log "Verifying restore ..."
+db_query() {
+    if docker ps --format '{{.Names}}' 2>/dev/null | grep -q "^${DB_CONTAINER:-pkhosting-db}$"; then
+        docker exec "${DB_CONTAINER:-pkhosting-db}" mysql -u"${DB_USER}" -p"${DB_PASS}" -N -e "$1" "${DB_NAME}" 2>/dev/null
+    else
+        mysql -h"${DB_HOST:-127.0.0.1}" -P"${DB_PORT:-3307}" -u"${DB_USER}" -p"${DB_PASS}" -N -e "$1" "${DB_NAME}" 2>/dev/null
+    fi
+}
+EXPECTED_POSTS="$(grep '^Posts:' "${BACKUP_DIR}/metadata.txt" 2>/dev/null | awk '{print $2}')"
+EXPECTED_VISITS="$(grep '^Visit count:' "${BACKUP_DIR}/metadata.txt" 2>/dev/null | awk '{print $3}')"
+ACTUAL_POSTS="$(db_query "SELECT COUNT(*) FROM posts;" || echo "unknown")"
+ACTUAL_VISITS="$(db_query "SELECT visit_count FROM stats WHERE id=1;" || echo "unknown")"
+log "Posts: expected=${EXPECTED_POSTS} restored=${ACTUAL_POSTS}"
+log "Visit count: expected=${EXPECTED_VISITS} restored=${ACTUAL_VISITS}"
+if [[ -n "$EXPECTED_POSTS" && "$EXPECTED_POSTS" != "unknown" && "$EXPECTED_POSTS" == "$ACTUAL_POSTS" && "$EXPECTED_VISITS" == "$ACTUAL_VISITS" ]]; then
+    log "Database check: OK (row counts match the backup)"
+else
+    echo "ERROR: Database check FAILED (restored counts do not match the backup metadata)"
+    exit 1
+fi
+if diff <(tar -tzf "${BACKUP_DIR}/files.tar.gz" | grep -v '/$' | sort) <(cd "$SITE_ROOT" && find . -type f | sed 's|^\./|sample-site/|' | sort) >/dev/null; then
+    log "Files check: OK (restored file list matches the backup archive)"
+else
+    echo "ERROR: Files check FAILED (restored file list differs from the backup)"
+    exit 1
+fi
+
 END_TIME=$(date +%s)
 DURATION=$((END_TIME - START_TIME))
 
