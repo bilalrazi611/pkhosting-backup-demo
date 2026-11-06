@@ -1,0 +1,9 @@
+Backup Name:    pkhosting_backup_20261106_112854
+Timestamp:      2026-11-06T11:28:54+00:00
+Host:           runnervmwuk1x
+Site Root:      /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backup-demo/sample-site
+Database:       sample_site
+Files Size:     4.0K
+DB Size:        4.0K
+Posts:          3
+Visit count:    4

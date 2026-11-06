@@ -1,0 +1,959 @@
+proof	Set up job	﻿2026-11-06T11:28:12.3034434Z Current runner version: '2.338.2'
+proof	Set up job	2026-11-06T11:28:12.3054678Z ##[group]Runner Image Provisioner
+proof	Set up job	2026-11-06T11:28:12.3055257Z Hosted Compute Agent
+proof	Set up job	2026-11-06T11:28:12.3055686Z Version: 20261028.624
+proof	Set up job	2026-11-06T11:28:12.3056098Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+proof	Set up job	2026-11-06T11:28:12.3056553Z Build Date: 2026-10-28T21:51:42Z
+proof	Set up job	2026-11-06T11:28:12.3056977Z Worker ID: {48dadb0f-3caf-4eb3-85e8-00f1c35148a0}
+proof	Set up job	2026-11-06T11:28:12.3057410Z Region: southcentralus
+proof	Set up job	2026-11-06T11:28:12.3057852Z Cloud: Azure
+proof	Set up job	2026-11-06T11:28:12.3058212Z ##[endgroup]
+proof	Set up job	2026-11-06T11:28:12.3059702Z ##[group]Operating System
+proof	Set up job	2026-11-06T11:28:12.3060096Z Ubuntu
+proof	Set up job	2026-11-06T11:28:12.3060420Z 26.04.1
+proof	Set up job	2026-11-06T11:28:12.3060769Z LTS
+proof	Set up job	2026-11-06T11:28:12.3061122Z ##[endgroup]
+proof	Set up job	2026-11-06T11:28:12.3061446Z ##[group]Runner Image
+proof	Set up job	2026-11-06T11:28:12.3061859Z Image: ubuntu-26.04
+proof	Set up job	2026-11-06T11:28:12.3062207Z Version: 20261101.186.1
+proof	Set up job	2026-11-06T11:28:12.3062897Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261101.186/images/ubuntu/Ubuntu2604-Readme.md
+proof	Set up job	2026-11-06T11:28:12.3063967Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261101.186
+proof	Set up job	2026-11-06T11:28:12.3064579Z ##[endgroup]
+proof	Set up job	2026-11-06T11:28:12.3065303Z ##[group]GITHUB_TOKEN Permissions
+proof	Set up job	2026-11-06T11:28:12.3066893Z Contents: read
+proof	Set up job	2026-11-06T11:28:12.3067250Z Metadata: read
+proof	Set up job	2026-11-06T11:28:12.3067639Z Packages: read
+proof	Set up job	2026-11-06T11:28:12.3067986Z ##[endgroup]
+proof	Set up job	2026-11-06T11:28:12.3069637Z Secret source: Actions
+proof	Set up job	2026-11-06T11:28:12.3070313Z Cache mode: write
+proof	Set up job	2026-11-06T11:28:12.3070748Z Prepare workflow directory
+proof	Set up job	2026-11-06T11:28:12.3296302Z Prepare all required actions
+proof	Set up job	2026-11-06T11:28:12.3335768Z Getting action download info
+proof	Set up job	2026-11-06T11:28:12.6580536Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+proof	Set up job	2026-11-06T11:28:12.7474156Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+proof	Set up job	2026-11-06T11:28:12.9508431Z Complete job name: proof
+proof	Check out	﻿2026-11-06T11:28:13.0110617Z ##[group]Run actions/checkout@v4
+proof	Check out	2026-11-06T11:28:13.0111092Z with:
+proof	Check out	2026-11-06T11:28:13.0111388Z   repository: pakmultilinks-dot/pkhosting-backup-demo
+proof	Check out	2026-11-06T11:28:13.0113665Z   token: ***
+proof	Check out	2026-11-06T11:28:13.0113908Z   ssh-strict: true
+proof	Check out	2026-11-06T11:28:13.0114163Z   ssh-user: git
+proof	Check out	2026-11-06T11:28:13.0114418Z   persist-credentials: true
+proof	Check out	2026-11-06T11:28:13.0114697Z   clean: true
+proof	Check out	2026-11-06T11:28:13.0114956Z   sparse-checkout-cone-mode: true
+proof	Check out	2026-11-06T11:28:13.0115249Z   fetch-depth: 1
+proof	Check out	2026-11-06T11:28:13.0115492Z   fetch-tags: false
+proof	Check out	2026-11-06T11:28:13.0115742Z   show-progress: true
+proof	Check out	2026-11-06T11:28:13.0115996Z   lfs: false
+proof	Check out	2026-11-06T11:28:13.0116231Z   submodules: false
+proof	Check out	2026-11-06T11:28:13.0116526Z   set-safe-directory: true
+proof	Check out	2026-11-06T11:28:13.0116817Z   allow-unsafe-pr-checkout: false
+proof	Check out	2026-11-06T11:28:13.0117186Z ##[endgroup]
+proof	Check out	2026-11-06T11:28:13.2434948Z Syncing repository: pakmultilinks-dot/pkhosting-backup-demo
+proof	Check out	2026-11-06T11:28:13.2436783Z ##[group]Getting Git version info
+proof	Check out	2026-11-06T11:28:13.2437384Z Working directory is '/home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo'
+proof	Check out	2026-11-06T11:28:13.2438106Z [command]/usr/bin/git version
+proof	Check out	2026-11-06T11:28:13.2453637Z git version 2.56.0
+proof	Check out	2026-11-06T11:28:13.2467093Z ##[endgroup]
+proof	Check out	2026-11-06T11:28:13.2478231Z Temporarily overriding HOME='/home/runner/work/_temp/2960db6b-98b4-46e8-ae0a-143ccc8364a3' before making global git config changes
+proof	Check out	2026-11-06T11:28:13.2479719Z Adding repository directory to the temporary git global config as a safe directory
+proof	Check out	2026-11-06T11:28:13.2482178Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo
+proof	Check out	2026-11-06T11:28:13.2553919Z Deleting the contents of '/home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo'
+proof	Check out	2026-11-06T11:28:13.2557342Z ##[group]Initializing the repository
+proof	Check out	2026-11-06T11:28:13.2562104Z [command]/usr/bin/git init /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo
+proof	Check out	2026-11-06T11:28:13.2658103Z hint: Using 'master' as the name for the initial branch. This default branch name
+proof	Check out	2026-11-06T11:28:13.2659348Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+proof	Check out	2026-11-06T11:28:13.2659875Z hint: to use in all of your new repositories, which will suppress this warning,
+proof	Check out	2026-11-06T11:28:13.2660323Z hint: call:
+proof	Check out	2026-11-06T11:28:13.2660554Z hint:
+proof	Check out	2026-11-06T11:28:13.2660875Z hint: 	git config --global init.defaultBranch <name>
+proof	Check out	2026-11-06T11:28:13.2661218Z hint:
+proof	Check out	2026-11-06T11:28:13.2661538Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+proof	Check out	2026-11-06T11:28:13.2662049Z hint: 'development'. The just-created branch can be renamed via this command:
+proof	Check out	2026-11-06T11:28:13.2662447Z hint:
+proof	Check out	2026-11-06T11:28:13.2662682Z hint: 	git branch -m <name>
+proof	Check out	2026-11-06T11:28:13.2662949Z hint:
+proof	Check out	2026-11-06T11:28:13.2663298Z hint: Disable this message with "git config set advice.defaultBranchName false"
+proof	Check out	2026-11-06T11:28:13.2684861Z Initialized empty Git repository in /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/.git/
+proof	Check out	2026-11-06T11:28:13.2686336Z [command]/usr/bin/git remote add origin https://github.com/pakmultilinks-dot/pkhosting-backup-demo
+proof	Check out	2026-11-06T11:28:13.2733308Z ##[endgroup]
+proof	Check out	2026-11-06T11:28:13.2734078Z ##[group]Disabling automatic garbage collection
+proof	Check out	2026-11-06T11:28:13.2737206Z [command]/usr/bin/git config --local gc.auto 0
+proof	Check out	2026-11-06T11:28:13.2771363Z ##[endgroup]
+proof	Check out	2026-11-06T11:28:13.2772104Z ##[group]Setting up auth
+proof	Check out	2026-11-06T11:28:13.2777833Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+proof	Check out	2026-11-06T11:28:13.2832551Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+proof	Check out	2026-11-06T11:28:13.3278940Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+proof	Check out	2026-11-06T11:28:13.3310385Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+proof	Check out	2026-11-06T11:28:13.3561001Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+proof	Check out	2026-11-06T11:28:13.3596361Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+proof	Check out	2026-11-06T11:28:13.3871146Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+proof	Check out	2026-11-06T11:28:13.4344580Z ##[endgroup]
+proof	Check out	2026-11-06T11:28:13.4345775Z ##[group]Fetching the repository
+proof	Check out	2026-11-06T11:28:13.4353362Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e6a64faedccebd0d38220063c601a21a7c9912ba:refs/remotes/origin/main
+proof	Check out	2026-11-06T11:28:13.7924822Z From https://github.com/pakmultilinks-dot/pkhosting-backup-demo
+proof	Check out	2026-11-06T11:28:13.7925606Z  * [new ref]         e6a64faedccebd0d38220063c601a21a7c9912ba -> origin/main
+proof	Check out	2026-11-06T11:28:13.7928958Z ##[endgroup]
+proof	Check out	2026-11-06T11:28:13.7929554Z ##[group]Determining the checkout info
+proof	Check out	2026-11-06T11:28:13.7931101Z ##[endgroup]
+proof	Check out	2026-11-06T11:28:13.7936403Z [command]/usr/bin/git sparse-checkout disable
+proof	Check out	2026-11-06T11:28:13.8025044Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+proof	Check out	2026-11-06T11:28:13.8052820Z ##[group]Checking out the ref
+proof	Check out	2026-11-06T11:28:13.8055710Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+proof	Check out	2026-11-06T11:28:13.8167792Z Switched to a new branch 'main'
+proof	Check out	2026-11-06T11:28:13.8169980Z branch 'main' set up to track 'origin/main'.
+proof	Check out	2026-11-06T11:28:13.8171727Z ##[endgroup]
+proof	Check out	2026-11-06T11:28:13.8179139Z [command]/usr/bin/git log -1 --format=%H
+proof	Check out	2026-11-06T11:28:13.8204185Z e6a64faedccebd0d38220063c601a21a7c9912ba
+proof	Create a fresh webhook inbox for the failure alert	﻿2026-11-06T11:28:13.8416810Z ##[group]Run UUID=$(curl -s -X POST "https://webhook.site/token" -H "Content-Type: application/json" -d '{}' | python3 -c "import json,sys; print(json.load(sys.stdin)['uuid'])")
+proof	Create a fresh webhook inbox for the failure alert	2026-11-06T11:28:13.8419202Z ^[[36;1mUUID=$(curl -s -X POST "https://webhook.site/token" -H "Content-Type: application/json" -d '{}' | python3 -c "import json,sys; print(json.load(sys.stdin)['uuid'])")^[[0m
+proof	Create a fresh webhook inbox for the failure alert	2026-11-06T11:28:13.8420487Z ^[[36;1mecho "uuid=$UUID" >> "$GITHUB_OUTPUT"^[[0m
+proof	Create a fresh webhook inbox for the failure alert	2026-11-06T11:28:13.8421326Z ^[[36;1mecho "WEBHOOK_URL=https://webhook.site/$UUID" >> "$GITHUB_ENV"^[[0m
+proof	Create a fresh webhook inbox for the failure alert	2026-11-06T11:28:13.8422396Z ^[[36;1mecho "Webhook inbox (open in a browser to see the alert arrive): https://webhook.site/$UUID"^[[0m
+proof	Create a fresh webhook inbox for the failure alert	2026-11-06T11:28:13.8469128Z shell: /usr/bin/bash -e {0}
+proof	Create a fresh webhook inbox for the failure alert	2026-11-06T11:28:13.8469769Z ##[endgroup]
+proof	Create a fresh webhook inbox for the failure alert	2026-11-06T11:28:14.3810738Z Webhook inbox (open in a browser to see the alert arrive): https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	Start the sample stack (Docker Compose)	﻿2026-11-06T11:28:14.3957218Z ##[group]Run docker compose up -d --wait
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:14.3958089Z ^[[36;1mdocker compose up -d --wait^[[0m
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:14.4002122Z shell: /usr/bin/bash -e {0}
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:14.4002650Z env:
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:14.4003333Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:14.4004218Z ##[endgroup]
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:14.6463447Z time="2026-11-06T11:28:14Z" level=warning msg="/home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backup-demo/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:14.6857053Z  Image mysql:8.0 Pulling 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4246655Z  edf85873f64e Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4247761Z  96d30d9fbee8 Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4248427Z  7534d1db9f8d Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4253970Z  6ef6c7b50a93 Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4254372Z  0d74d296605b Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4254714Z  49ec2dab01d9 Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4254981Z  297d04cfe470 Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4255185Z  ab24264a27e9 Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4255383Z  4c8a3e0d4e4b Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4255613Z  a63160a5eda1 Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.4255777Z  e3e5d1ac74c1 Pulling fs layer 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.5912119Z  7534d1db9f8d Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.5913997Z  297d04cfe470 Downloading 2.607kB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.5914295Z  49ec2dab01d9 Downloading 1.049MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.5914595Z  edf85873f64e Downloading 6.291MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.5914908Z  96d30d9fbee8 Downloading 120B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.6903865Z  edf85873f64e Downloading 30.41MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.6921202Z  96d30d9fbee8 Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.6928697Z  0d74d296605b Downloading 3.146MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.6977800Z  6ef6c7b50a93 Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.6978871Z  4c8a3e0d4e4b Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.6985614Z  e3e5d1ac74c1 Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.6986555Z  a63160a5eda1 Downloading 3.146MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.7003881Z  297d04cfe470 Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.7004452Z  49ec2dab01d9 Downloading 20.97MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.7033301Z  ab24264a27e9 Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.7931665Z  49ec2dab01d9 Downloading 32.51MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.7967422Z  796812c73292 Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.7978276Z  af166387641d Downloading 4.194MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.7990885Z  edf85873f64e Downloading 46.14MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.7993014Z  0d74d296605b Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.7993386Z  a63160a5eda1 Downloading 16.78MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.8884421Z  49ec2dab01d9 Downloading 58.72MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.8884884Z  af166387641d Downloading 15.43MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.8885225Z  edf85873f64e Downloading 47.31MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.8885471Z  a63160a5eda1 Downloading 39.85MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.9882311Z  49ec2dab01d9 Downloading 91.23MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.9882763Z  af166387641d Downloading 15.43MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.9883076Z  edf85873f64e Downloading 47.31MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:15.9883318Z  a63160a5eda1 Downloading 49.93MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.0886483Z  edf85873f64e Downloading 47.31MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.1758138Z  a63160a5eda1 Downloading 49.93MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.1758474Z  49ec2dab01d9 Downloading 126.9MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.1759785Z  af166387641d Downloading 15.43MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.1894554Z  edf85873f64e Downloading 47.31MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.1896032Z  a63160a5eda1 Downloading 49.93MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.1896759Z  49ec2dab01d9 Downloading 129.4MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.1897678Z  af166387641d Downloading 15.43MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.2911133Z  49ec2dab01d9 Downloading 129.4MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.2912325Z  af166387641d Downloading 15.43MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.2912830Z  a63160a5eda1 Downloading 49.93MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.3899949Z  a63160a5eda1 Downloading 49.93MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.3901185Z  49ec2dab01d9 Downloading 129.4MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.3901423Z  af166387641d Downloading 15.43MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.4887610Z  49ec2dab01d9 Downloading 129.4MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.4888825Z  af166387641d Downloading 15.43MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.4892973Z  edf85873f64e Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.4893349Z  a63160a5eda1 Downloading 49.93MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.4965195Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.5880736Z  a63160a5eda1 Downloading 49.93MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.5881162Z  49ec2dab01d9 Downloading 129.4MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.5952588Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.6884555Z  af166387641d Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.6884996Z  a63160a5eda1 Downloading 49.93MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.6885279Z  49ec2dab01d9 Downloading 129.4MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.6944715Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.7887289Z  a63160a5eda1 Downloading 49.93MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.7887711Z  49ec2dab01d9 Downloading 129.4MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.7948350Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.8885740Z  49ec2dab01d9 Downloading 129.4MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.8988875Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.9896758Z  49ec2dab01d9 Downloading 129.4MB
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:16.9963657Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.0887761Z  49ec2dab01d9 Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.0888706Z  a63160a5eda1 Download complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.1004693Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.1965957Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.2956233Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.3957521Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.4958123Z  edf85873f64e Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.5921092Z  6ef6c7b50a93 Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.5933796Z  e3e5d1ac74c1 Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.5966048Z  0d74d296605b Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.5975708Z  edf85873f64e Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.6907312Z  4c8a3e0d4e4b Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.6947152Z  297d04cfe470 Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.6966152Z  0d74d296605b Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.6987989Z  a63160a5eda1 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.7946821Z  a63160a5eda1 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.8940259Z  a63160a5eda1 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:17.9941107Z  a63160a5eda1 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.0935023Z  a63160a5eda1 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.1902265Z  7534d1db9f8d Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.1929341Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.1939837Z  a63160a5eda1 Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.2905510Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.3929687Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.4923978Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.5915220Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.6912188Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.7919149Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.8907196Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:18.9925161Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.0909411Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.1907956Z  49ec2dab01d9 Extracting 1B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.2911246Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.3904483Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.4905517Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.5910127Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.6915764Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.7909083Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.8974549Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:19.9907598Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.0918280Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.1908400Z  49ec2dab01d9 Extracting 2B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.2924136Z  49ec2dab01d9 Extracting 3B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.3919566Z  49ec2dab01d9 Extracting 3B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.4915786Z  49ec2dab01d9 Extracting 3B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.5913070Z  49ec2dab01d9 Extracting 3B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.6917040Z  49ec2dab01d9 Extracting 3B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.7946060Z  49ec2dab01d9 Extracting 3B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.8917838Z  49ec2dab01d9 Extracting 3B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:20.9908855Z  49ec2dab01d9 Extracting 3B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.0923638Z  49ec2dab01d9 Extracting 3B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.2121080Z  96d30d9fbee8 Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.2140681Z  ab24264a27e9 Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.2141333Z  49ec2dab01d9 Pull complete 0B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.2149221Z  Image mysql:8.0 Pulled 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.4384001Z  Image pkhosting-backup-demo-web Building 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.4997061Z #1 [internal] load local bake definitions
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.6015740Z #1 reading from stdin 634B done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.6016152Z #1 DONE 0.0s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.7824920Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.7825658Z #2 [internal] load build definition from Dockerfile
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.7826047Z #2 transferring dockerfile: 103B done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.7826291Z #2 DONE 0.0s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.7826399Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.7826544Z #3 [auth] library/php:pull token for registry-1.docker.io
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.9330248Z #3 DONE 0.0s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.9330502Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:21.9331631Z #4 [internal] load metadata for docker.io/library/php:8.2-apache
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.3183267Z #4 DONE 0.7s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.4717254Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.4718939Z #5 [internal] load .dockerignore
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.4719351Z #5 transferring context: 2B done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.4719653Z #5 DONE 0.0s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.4719820Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.4720226Z #6 [1/2] FROM docker.io/library/php:8.2-apache@sha256:e8d7ae73c794b83fd38005288fa504c563e2bd29bc8bfe6e4a47a15d69fec645
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.4720741Z #6 resolve docker.io/library/php:8.2-apache@sha256:e8d7ae73c794b83fd38005288fa504c563e2bd29bc8bfe6e4a47a15d69fec645 0.0s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.4721344Z #6 sha256:63d9600416fc365aa36e7afcdc3ee60b2b90d0e15daa75ced351c6ef4fe98776 893B / 893B 0.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.5870430Z #6 sha256:056a652ef66ca46648036ef889698f5521794c18f5bbb72f87499be30b9db0c5 244B / 244B 0.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.5871590Z #6 sha256:c59ddaf7351f43e32989821bb6cee017fcd22d60c11fc8b3a2b510df2c0fbe49 249B / 249B 0.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.5872464Z #6 sha256:76f6862a7165795f95ccd3d0d24d81993d22a736a4fad7f9984b9d7d7797dd2c 2.46kB / 2.46kB 0.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.5873116Z #6 sha256:f51748d48a2858c3774178a7021421117c26e9923c066b9f41fdf30b8473187a 490B / 490B 0.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.7041246Z #6 sha256:158904e0d3fc224cd9fd7af1acc5a182f902a154764ed423cbf2e57141cefbe0 1.05MB / 11.50MB 0.2s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.7042257Z #6 sha256:1f4340b3e42305ac489b46bbad6b3beecac14a21378d6dbaea54aeb05365484c 488B / 488B 0.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.7043018Z #6 sha256:63c4ad33bcd3966f2af8acd1d8347ff0b9de32c1613d05ba5b364c820b8f6545 436B / 436B 0.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.7043761Z #6 sha256:9305e45d6aa7c7875234c18b2eab689944d54adf871d68b98fe2ef61dc1831d2 10.49MB / 12.38MB 0.2s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.8147385Z #6 sha256:158904e0d3fc224cd9fd7af1acc5a182f902a154764ed423cbf2e57141cefbe0 11.50MB / 11.50MB 0.3s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.8148108Z #6 sha256:c2df53f4c16864fa5d2ea17916c72bff74001acc532fab9db78c5478f854963a 224B / 224B 0.2s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.9673361Z #6 sha256:7eee9dfd24a7c4931d273fffce3fe4b69eb966a1ab0c59e7f96ca28b61379d96 4.24MB / 4.24MB 0.2s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.9674194Z #6 sha256:158904e0d3fc224cd9fd7af1acc5a182f902a154764ed423cbf2e57141cefbe0 11.50MB / 11.50MB 0.3s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.9677133Z #6 sha256:9305e45d6aa7c7875234c18b2eab689944d54adf871d68b98fe2ef61dc1831d2 12.38MB / 12.38MB 0.3s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.9678885Z #6 sha256:7eee9dfd24a7c4931d273fffce3fe4b69eb966a1ab0c59e7f96ca28b61379d96 4.24MB / 4.24MB 0.2s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.9703907Z #6 sha256:e1af7931d3492b55f556b35ef4e3dc325cfc2e3328b8846b7b71d44729cd02dd 226B / 226B 0.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:22.9709838Z #6 sha256:55717ea62d05106357a9b4b661a8ebb2e8fe051e1a744adca82cb64fbc6fdb08 3.15MB / 117.84MB 0.2s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:23.1164979Z #6 sha256:55717ea62d05106357a9b4b661a8ebb2e8fe051e1a744adca82cb64fbc6fdb08 57.67MB / 117.84MB 0.3s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:23.1165682Z #6 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 11.53MB / 29.86MB 0.2s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:23.2360071Z #6 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 29.86MB / 29.86MB 0.4s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:23.4170163Z #6 sha256:55717ea62d05106357a9b4b661a8ebb2e8fe051e1a744adca82cb64fbc6fdb08 114.29MB / 117.84MB 0.5s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:23.4171244Z #6 extracting sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:24.0482593Z #6 sha256:55717ea62d05106357a9b4b661a8ebb2e8fe051e1a744adca82cb64fbc6fdb08 117.84MB / 117.84MB 1.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:24.0483324Z #6 extracting sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 0.7s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:24.0483875Z #6 extracting sha256:e1af7931d3492b55f556b35ef4e3dc325cfc2e3328b8846b7b71d44729cd02dd done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:24.0484389Z #6 extracting sha256:55717ea62d05106357a9b4b661a8ebb2e8fe051e1a744adca82cb64fbc6fdb08
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.4411813Z #6 extracting sha256:55717ea62d05106357a9b4b661a8ebb2e8fe051e1a744adca82cb64fbc6fdb08 1.5s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.4412389Z #6 DONE 3.1s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.5536232Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.5537261Z #6 [1/2] FROM docker.io/library/php:8.2-apache@sha256:e8d7ae73c794b83fd38005288fa504c563e2bd29bc8bfe6e4a47a15d69fec645
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.5537957Z #6 extracting sha256:c2df53f4c16864fa5d2ea17916c72bff74001acc532fab9db78c5478f854963a 0.1s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.5538375Z #6 DONE 3.2s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.7039912Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.7040770Z #6 [1/2] FROM docker.io/library/php:8.2-apache@sha256:e8d7ae73c794b83fd38005288fa504c563e2bd29bc8bfe6e4a47a15d69fec645
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.7041217Z #6 extracting sha256:7eee9dfd24a7c4931d273fffce3fe4b69eb966a1ab0c59e7f96ca28b61379d96
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.8869235Z #6 extracting sha256:7eee9dfd24a7c4931d273fffce3fe4b69eb966a1ab0c59e7f96ca28b61379d96 0.3s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:25.8869609Z #6 DONE 3.6s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.0841132Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.0842395Z #6 [1/2] FROM docker.io/library/php:8.2-apache@sha256:e8d7ae73c794b83fd38005288fa504c563e2bd29bc8bfe6e4a47a15d69fec645
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.0843375Z #6 extracting sha256:63c4ad33bcd3966f2af8acd1d8347ff0b9de32c1613d05ba5b364c820b8f6545 done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.0844108Z #6 extracting sha256:1f4340b3e42305ac489b46bbad6b3beecac14a21378d6dbaea54aeb05365484c done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.0844862Z #6 extracting sha256:9305e45d6aa7c7875234c18b2eab689944d54adf871d68b98fe2ef61dc1831d2 0.0s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.0845557Z #6 extracting sha256:f51748d48a2858c3774178a7021421117c26e9923c066b9f41fdf30b8473187a done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.0846184Z #6 extracting sha256:158904e0d3fc224cd9fd7af1acc5a182f902a154764ed423cbf2e57141cefbe0
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.1034383Z #6 extracting sha256:158904e0d3fc224cd9fd7af1acc5a182f902a154764ed423cbf2e57141cefbe0 0.2s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.1034747Z #6 DONE 3.8s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2848844Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2850113Z #6 [1/2] FROM docker.io/library/php:8.2-apache@sha256:e8d7ae73c794b83fd38005288fa504c563e2bd29bc8bfe6e4a47a15d69fec645
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2851003Z #6 extracting sha256:76f6862a7165795f95ccd3d0d24d81993d22a736a4fad7f9984b9d7d7797dd2c done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2851691Z #6 extracting sha256:c59ddaf7351f43e32989821bb6cee017fcd22d60c11fc8b3a2b510df2c0fbe49 done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2852482Z #6 extracting sha256:056a652ef66ca46648036ef889698f5521794c18f5bbb72f87499be30b9db0c5 done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2853172Z #6 extracting sha256:63d9600416fc365aa36e7afcdc3ee60b2b90d0e15daa75ced351c6ef4fe98776 done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2854182Z #6 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2854727Z #6 DONE 3.8s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2854957Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:26.2855235Z #7 [2/2] RUN docker-php-ext-install mysqli pdo_mysql
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.3882621Z #7 1.253 Configuring for:
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.3882959Z #7 1.253 PHP Api Version:         20220829
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.3883163Z #7 1.253 Zend Module Api No:      20220829
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.3883391Z #7 1.253 Zend Extension Api No:   420220829
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.9090567Z #7 1.669 checking for grep that handles long lines and -e... /usr/bin/grep
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.9091099Z #7 1.671 checking for egrep... /usr/bin/grep -E
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.9091462Z #7 1.672 checking for a sed that does not truncate output... /usr/bin/sed
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.9092215Z #7 1.694 checking for pkg-config... /usr/bin/pkg-config
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.9092556Z #7 1.694 checking pkg-config is at least version 0.9.0... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.9092877Z #7 1.695 checking for cc... cc
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.9093075Z #7 1.717 checking whether the C compiler works... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.9093291Z #7 1.745 checking for C compiler default output file name... a.out
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:27.9093504Z #7 1.747 checking for suffix of executables... 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.0254053Z #7 1.776 checking whether we are cross compiling... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.0254548Z #7 1.809 checking for suffix of object files... o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.0254883Z #7 1.825 checking whether the compiler supports GNU C... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.0255240Z #7 1.841 checking whether cc accepts -g... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.0255577Z #7 1.858 checking for cc option to enable C11 features... none needed
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.1255012Z #7 1.891 checking how to run the C preprocessor... cc -E
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.1255554Z #7 1.940 checking for egrep -e... (cached) /usr/bin/grep -E
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.1255860Z #7 1.940 checking for icc... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.1256109Z #7 1.948 checking for suncc... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.1256511Z #7 1.956 checking for system library directory... lib
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.1256913Z #7 1.956 checking if compiler supports -Wl,-rpath,... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2329442Z #7 1.991 checking build system type... x86_64-pc-linux-gnu
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2329811Z #7 1.995 checking host system type... x86_64-pc-linux-gnu
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2330041Z #7 1.995 checking target system type... x86_64-pc-linux-gnu
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2330247Z #7 2.021 checking for PHP prefix... /usr/local
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2330743Z #7 2.021 checking for PHP includes... -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2331340Z #7 2.021 checking for PHP extension directory... /usr/local/lib/php/extensions/no-debug-non-zts-20220829
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2331657Z #7 2.021 checking for PHP installed headers prefix... /usr/local/include/php
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2331898Z #7 2.021 checking if debug is enabled... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2332064Z #7 2.034 checking if zts is enabled... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2332218Z #7 2.046 checking for gawk... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2332364Z #7 2.046 checking for nawk... nawk
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2332513Z #7 2.046 checking if nawk is broken... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2332688Z #7 2.047 checking for MySQLi support... yes, shared
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2332903Z #7 2.048 checking for specified location of the MySQL UNIX socket... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2333124Z #7 2.048 checking for MySQL UNIX socket location... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2333363Z #7 2.061 checking for a sed that does not truncate output... /usr/bin/sed
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2333579Z #7 2.064 checking for ld used by cc... /usr/bin/ld
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2333788Z #7 2.068 checking if the linker (/usr/bin/ld) is GNU ld... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2334016Z #7 2.070 checking for /usr/bin/ld option to reload object files... -r
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2334478Z #7 2.070 checking for BSD-compatible nm... /usr/bin/nm -B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2334666Z #7 2.072 checking whether ln -s works... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2334865Z #7 2.072 checking how to recognize dependent libraries... pass_all
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.2335061Z #7 2.084 checking for stdio.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.3462784Z #7 2.098 checking for stdlib.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.3463188Z #7 2.116 checking for string.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.3463470Z #7 2.134 checking for inttypes.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.3463726Z #7 2.152 checking for stdint.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.3464063Z #7 2.173 checking for strings.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.3464365Z #7 2.192 checking for sys/stat.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.4608078Z #7 2.211 checking for sys/types.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.4608477Z #7 2.231 checking for unistd.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.4609057Z #7 2.251 checking for dlfcn.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.4609275Z #7 2.271 checking the maximum length of command line arguments... 3145728
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.4609600Z #7 2.275 checking command to parse /usr/bin/nm -B output from cc object... ok
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.5937640Z #7 2.326 checking for objdir... .libs
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.5937929Z #7 2.330 checking for ar... ar
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.5938084Z #7 2.330 checking for ranlib... ranlib
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.5938249Z #7 2.330 checking for strip... strip
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.5938482Z #7 2.370 checking if cc supports -fno-rtti -fno-exceptions... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.5938850Z #7 2.387 checking for cc option to produce PIC... -fPIC
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.5939047Z #7 2.388 checking if cc PIC flag -fPIC works... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.5939246Z #7 2.403 checking if cc static flag -static works... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7680048Z #7 2.459 checking if cc supports -c -o file.o... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7680709Z #7 2.480 checking whether the cc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7681226Z #7 2.490 checking whether -lc should be explicitly linked in... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7681688Z #7 2.510 checking dynamic linker characteristics... GNU/Linux ld.so
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7682122Z #7 2.522 checking how to hardcode library paths into programs... immediate
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7682544Z #7 2.522 checking whether stripping libraries is possible... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7682972Z #7 2.523 checking if libtool supports shared libraries... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7683258Z #7 2.524 checking whether to build shared libraries... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7683507Z #7 2.524 checking whether to build static libraries... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7683796Z #7 2.633 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.7683949Z #7 2.633 creating libtool
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.8812468Z #7 2.647 appending configuration tag "CXX" to libtool
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.8813050Z #7 2.698 configure: patching config.h.in
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.8813464Z #7 2.705 configure: creating ./config.status
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.8813734Z #7 2.746 config.status: creating config.h
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.9849171Z #7 2.774 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli.c -o mysqli.lo  -MMD -MF mysqli.dep -MT mysqli.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:28.9850792Z #7 2.850 mkdir .libs
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:29.1369798Z #7 2.852  cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli.c -MMD -MF mysqli.dep -MT mysqli.lo  -fPIC -DPIC -o .libs/mysqli.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:29.5421104Z #7 3.407 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_api.c -o mysqli_api.lo  -MMD -MF mysqli_api.dep -MT mysqli_api.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:29.7683054Z #7 3.483  cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_api.c -MMD -MF mysqli_api.dep -MT mysqli_api.lo  -fPIC -DPIC -o .libs/mysqli_api.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:30.3049709Z #7 4.170 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_prop.c -o mysqli_prop.lo  -MMD -MF mysqli_prop.dep -MT mysqli_prop.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:30.5283209Z #7 4.243  cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_prop.c -MMD -MF mysqli_prop.dep -MT mysqli_prop.lo  -fPIC -DPIC -o .libs/mysqli_prop.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:30.6934150Z #7 4.558 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_nonapi.c -o mysqli_nonapi.lo  -MMD -MF mysqli_nonapi.dep -MT mysqli_nonapi.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:30.9161036Z #7 4.630  cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_nonapi.c -MMD -MF mysqli_nonapi.dep -MT mysqli_nonapi.lo  -fPIC -DPIC -o .libs/mysqli_nonapi.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.0706531Z #7 4.936 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_report.c -o mysqli_report.lo  -MMD -MF mysqli_report.dep -MT mysqli_report.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.2319661Z #7 5.012  cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_report.c -MMD -MF mysqli_report.dep -MT mysqli_report.lo  -fPIC -DPIC -o .libs/mysqli_report.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.2322387Z #7 5.097 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_driver.c -o mysqli_driver.lo  -MMD -MF mysqli_driver.dep -MT mysqli_driver.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.3988966Z #7 5.170  cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_driver.c -MMD -MF mysqli_driver.dep -MT mysqli_driver.lo  -fPIC -DPIC -o .libs/mysqli_driver.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.3991538Z #7 5.264 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_warning.c -o mysqli_warning.lo  -MMD -MF mysqli_warning.dep -MT mysqli_warning.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.5807769Z #7 5.334  cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_warning.c -MMD -MF mysqli_warning.dep -MT mysqli_warning.lo  -fPIC -DPIC -o .libs/mysqli_warning.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.5813012Z #7 5.446 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_exception.c -o mysqli_exception.lo  -MMD -MF mysqli_exception.dep -MT mysqli_exception.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.7419743Z #7 5.518  cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_exception.c -MMD -MF mysqli_exception.dep -MT mysqli_exception.lo  -fPIC -DPIC -o .libs/mysqli_exception.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.7424260Z #7 5.607 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_result_iterator.c -o mysqli_result_iterator.lo  -MMD -MF mysqli_result_iterator.dep -MT mysqli_result_iterator.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.9042500Z #7 5.678  cc -I. -I/usr/src/php/ext/mysqli -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/mysqli/mysqli_result_iterator.c -MMD -MF mysqli_result_iterator.dep -MT mysqli_result_iterator.lo  -fPIC -DPIC -o .libs/mysqli_result_iterator.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:31.9046682Z #7 5.769 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=link cc -shared -I/usr/src/php/ext/mysqli/include -I/usr/src/php/ext/mysqli/main -I/usr/src/php/ext/mysqli -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wl,-O1 -pie  -o mysqli.la -export-dynamic -avoid-version -prefer-pic -module -rpath /usr/src/php/ext/mysqli/modules  mysqli.lo mysqli_api.lo mysqli_prop.lo mysqli_nonapi.lo mysqli_report.lo mysqli_driver.lo mysqli_warning.lo mysqli_exception.lo mysqli_result_iterator.lo 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.0101807Z #7 5.860 cc -shared  .libs/mysqli.o .libs/mysqli_api.o .libs/mysqli_prop.o .libs/mysqli_nonapi.o .libs/mysqli_report.o .libs/mysqli_driver.o .libs/mysqli_warning.o .libs/mysqli_exception.o .libs/mysqli_result_iterator.o   -Wl,-O1 -Wl,-soname -Wl,mysqli.so -o .libs/mysqli.so
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.0102829Z #7 5.875 creating mysqli.la
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1564684Z #7 5.881 (cd .libs && rm -f mysqli.la && ln -s ../mysqli.la mysqli.la)
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1565527Z #7 5.883 /bin/bash /usr/src/php/ext/mysqli/libtool --tag=CC --mode=install cp ./mysqli.la /usr/src/php/ext/mysqli/modules
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1566403Z #7 5.901 cp ./.libs/mysqli.so /usr/src/php/ext/mysqli/modules/mysqli.so
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1567144Z #7 5.904 cp ./.libs/mysqli.lai /usr/src/php/ext/mysqli/modules/mysqli.la
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1567750Z #7 5.916 PATH="$PATH:/sbin" ldconfig -n /usr/src/php/ext/mysqli/modules
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1568166Z #7 5.918 ----------------------------------------------------------------------
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1568499Z #7 5.918 Libraries have been installed in:
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1568906Z #7 5.918    /usr/src/php/ext/mysqli/modules
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1569149Z #7 5.918 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1569435Z #7 5.918 If you ever happen to want to link against installed libraries
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1569960Z #7 5.918 in a given directory, LIBDIR, you must either use libtool, and
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1570373Z #7 5.918 specify the full pathname of the library, or use the `-LLIBDIR'
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1570778Z #7 5.918 flag during linking and do at least one of the following:
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1571154Z #7 5.918    - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1571479Z #7 5.918      during execution
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1571751Z #7 5.918    - add LIBDIR to the `LD_RUN_PATH' environment variable
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1572051Z #7 5.918      during linking
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1572324Z #7 5.918    - use the `-Wl,--rpath -Wl,LIBDIR' linker flag
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1572702Z #7 5.918    - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1573029Z #7 5.918 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1573289Z #7 5.918 See any operating system documentation about shared libraries for
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1573699Z #7 5.918 more information, such as the ld(1) and ld.so(8) manual pages.
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1574078Z #7 5.919 ----------------------------------------------------------------------
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1574377Z #7 5.920 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1574550Z #7 5.921 Build complete.
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1574769Z #7 5.922 Don't forget to run 'make test'.
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1575004Z #7 5.923 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1575198Z #7 5.936 + strip --strip-all modules/mysqli.so
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1575618Z #7 5.954 Installing shared extensions:     /usr/local/lib/php/extensions/no-debug-non-zts-20220829/
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.1576084Z #7 6.022 Installing header files:          /usr/local/include/php/
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2627454Z #7 6.089 find . -name \*.gcno -o -name \*.gcda | xargs rm -f
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2627942Z #7 6.092 find . -name \*.lo -o -name \*.o -o -name \*.dep | xargs rm -f
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2628299Z #7 6.096 find . -name \*.la -o -name \*.a | xargs rm -f
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2628696Z #7 6.099 find . -name \*.so | xargs rm -f
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2628922Z #7 6.102 find . -name .libs -a -type d|xargs rm -rf
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2629116Z #7 6.105 rm -f libphp.la      modules/* libs/*
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2629290Z #7 6.106 rm -f ext/opcache/jit/zend_jit_x86.c
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2629471Z #7 6.108 rm -f ext/opcache/jit/zend_jit_arm64.c
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2629646Z #7 6.109 rm -f ext/opcache/minilua
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2629810Z #7 6.128 Configuring for:
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2630262Z #7 6.128 PHP Api Version:         20220829
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2630434Z #7 6.128 Zend Module Api No:      20220829
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.2630598Z #7 6.128 Zend Extension Api No:   420220829
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7858907Z #7 6.523 checking for grep that handles long lines and -e... /usr/bin/grep
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7859252Z #7 6.524 checking for egrep... /usr/bin/grep -E
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7859474Z #7 6.526 checking for a sed that does not truncate output... /usr/bin/sed
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7859714Z #7 6.545 checking for pkg-config... /usr/bin/pkg-config
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7859930Z #7 6.545 checking pkg-config is at least version 0.9.0... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7860122Z #7 6.546 checking for cc... cc
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7860283Z #7 6.565 checking whether the C compiler works... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7860500Z #7 6.592 checking for C compiler default output file name... a.out
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7860708Z #7 6.593 checking for suffix of executables... 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.7860934Z #7 6.620 checking whether we are cross compiling... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.9042838Z #7 6.652 checking for suffix of object files... o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.9043211Z #7 6.668 checking whether the compiler supports GNU C... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.9043469Z #7 6.683 checking whether cc accepts -g... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.9043687Z #7 6.707 checking for cc option to enable C11 features... none needed
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:32.9043924Z #7 6.743 checking how to run the C preprocessor... cc -E
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0121656Z #7 6.789 checking for egrep -e... (cached) /usr/bin/grep -E
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0122102Z #7 6.789 checking for icc... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0122331Z #7 6.797 checking for suncc... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0122594Z #7 6.804 checking for system library directory... lib
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0122920Z #7 6.804 checking if compiler supports -Wl,-rpath,... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0123260Z #7 6.835 checking build system type... x86_64-pc-linux-gnu
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0123577Z #7 6.839 checking host system type... x86_64-pc-linux-gnu
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0123933Z #7 6.839 checking target system type... x86_64-pc-linux-gnu
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0124243Z #7 6.865 checking for PHP prefix... /usr/local
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0125003Z #7 6.865 checking for PHP includes... -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0125887Z #7 6.865 checking for PHP extension directory... /usr/local/lib/php/extensions/no-debug-non-zts-20220829
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0126211Z #7 6.865 checking for PHP installed headers prefix... /usr/local/include/php
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.0126435Z #7 6.865 checking if debug is enabled... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1194303Z #7 6.877 checking if zts is enabled... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1194780Z #7 6.889 checking for gawk... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1195229Z #7 6.890 checking for nawk... nawk
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1195667Z #7 6.890 checking if nawk is broken... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1196059Z #7 6.891 checking for MySQL support for PDO... yes, shared
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1196386Z #7 6.891 checking for the location of libz... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1196681Z #7 6.892 checking for MySQL UNIX socket location... 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1197301Z #7 6.892 checking for PDO includes... /usr/local/include/php/ext
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1197675Z #7 6.897 checking for a sed that does not truncate output... /usr/bin/sed
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1198015Z #7 6.899 checking for ld used by cc... /usr/bin/ld
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1198330Z #7 6.903 checking if the linker (/usr/bin/ld) is GNU ld... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1198857Z #7 6.905 checking for /usr/bin/ld option to reload object files... -r
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1199218Z #7 6.905 checking for BSD-compatible nm... /usr/bin/nm -B
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1199524Z #7 6.907 checking whether ln -s works... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1199768Z #7 6.907 checking how to recognize dependent libraries... pass_all
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1199967Z #7 6.919 checking for stdio.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1200280Z #7 6.933 checking for stdlib.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1200492Z #7 6.950 checking for string.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.1200650Z #7 6.967 checking for inttypes.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.2332789Z #7 6.985 checking for stdint.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.2333314Z #7 7.002 checking for strings.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.2333631Z #7 7.022 checking for sys/stat.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.2333890Z #7 7.041 checking for sys/types.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.2334133Z #7 7.059 checking for unistd.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.2334376Z #7 7.079 checking for dlfcn.h... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.3454399Z #7 7.099 checking the maximum length of command line arguments... 3145728
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.3454975Z #7 7.102 checking command to parse /usr/bin/nm -B output from cc object... ok
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.3455330Z #7 7.152 checking for objdir... .libs
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.3455577Z #7 7.156 checking for ar... ar
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.3455802Z #7 7.156 checking for ranlib... ranlib
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.3456089Z #7 7.156 checking for strip... strip
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.3456401Z #7 7.195 checking if cc supports -fno-rtti -fno-exceptions... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.4489704Z #7 7.210 checking for cc option to produce PIC... -fPIC
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.4490216Z #7 7.211 checking if cc PIC flag -fPIC works... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.4490548Z #7 7.229 checking if cc static flag -static works... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.4490872Z #7 7.283 checking if cc supports -c -o file.o... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.4491298Z #7 7.304 checking whether the cc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.5892564Z #7 7.314 checking whether -lc should be explicitly linked in... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.5893099Z #7 7.334 checking dynamic linker characteristics... GNU/Linux ld.so
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.5893501Z #7 7.345 checking how to hardcode library paths into programs... immediate
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.5893892Z #7 7.345 checking whether stripping libraries is possible... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.5894297Z #7 7.347 checking if libtool supports shared libraries... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.5894626Z #7 7.347 checking whether to build shared libraries... yes
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.5894876Z #7 7.347 checking whether to build static libraries... no
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.5895069Z #7 7.454 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.5895187Z #7 7.454 creating libtool
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.7113258Z #7 7.467 appending configuration tag "CXX" to libtool
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.7113701Z #7 7.511 configure: patching config.h.in
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.7113971Z #7 7.514 configure: creating ./config.status
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.7114232Z #7 7.552 config.status: creating config.h
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.8751744Z #7 7.576 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/pdo_mysql/pdo_mysql.c -o pdo_mysql.lo  -MMD -MF pdo_mysql.dep -MT pdo_mysql.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.8753635Z #7 7.650 mkdir .libs
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.8754892Z #7 7.651  cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/pdo_mysql/pdo_mysql.c -MMD -MF pdo_mysql.dep -MT pdo_mysql.lo  -fPIC -DPIC -o .libs/pdo_mysql.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:33.8757518Z #7 7.740 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/pdo_mysql/mysql_driver.c -o mysql_driver.lo  -MMD -MF mysql_driver.dep -MT mysql_driver.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.0999844Z #7 7.815  cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/pdo_mysql/mysql_driver.c -MMD -MF mysql_driver.dep -MT mysql_driver.lo  -fPIC -DPIC -o .libs/mysql_driver.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.1936848Z #7 8.059 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --tag=CC --mode=compile cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/pdo_mysql/mysql_statement.c -o mysql_statement.lo  -MMD -MF mysql_statement.dep -MT mysql_statement.lo
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.4186295Z #7 8.133  cc -I. -I/usr/src/php/ext/pdo_mysql -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -I/usr/local/include/php/ext -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DZEND_COMPILE_DL_EXT=1 -c /usr/src/php/ext/pdo_mysql/mysql_statement.c -MMD -MF mysql_statement.dep -MT mysql_statement.lo  -fPIC -DPIC -o .libs/mysql_statement.o
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.4195369Z #7 8.285 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --tag=CC --mode=link cc -shared -I/usr/src/php/ext/pdo_mysql/include -I/usr/src/php/ext/pdo_mysql/main -I/usr/src/php/ext/pdo_mysql -I/usr/local/include/php -I/usr/local/include/php/main -I/usr/local/include/php/TSRM -I/usr/local/include/php/Zend -I/usr/local/include/php/ext -I/usr/local/include/php/ext/date/lib  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -DHAVE_CONFIG_H  -fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wl,-O1 -pie  -o pdo_mysql.la -export-dynamic -avoid-version -prefer-pic -module -rpath /usr/src/php/ext/pdo_mysql/modules  pdo_mysql.lo mysql_driver.lo mysql_statement.lo 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.5303460Z #7 8.356 cc -shared  .libs/pdo_mysql.o .libs/mysql_driver.o .libs/mysql_statement.o   -Wl,-O1 -Wl,-soname -Wl,pdo_mysql.so -o .libs/pdo_mysql.so
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.5303930Z #7 8.369 creating pdo_mysql.la
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.5304141Z #7 8.375 (cd .libs && rm -f pdo_mysql.la && ln -s ../pdo_mysql.la pdo_mysql.la)
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.5304495Z #7 8.377 /bin/bash /usr/src/php/ext/pdo_mysql/libtool --tag=CC --mode=install cp ./pdo_mysql.la /usr/src/php/ext/pdo_mysql/modules
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.5304850Z #7 8.395 cp ./.libs/pdo_mysql.so /usr/src/php/ext/pdo_mysql/modules/pdo_mysql.so
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6303770Z #7 8.398 cp ./.libs/pdo_mysql.lai /usr/src/php/ext/pdo_mysql/modules/pdo_mysql.la
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6304363Z #7 8.410 PATH="$PATH:/sbin" ldconfig -n /usr/src/php/ext/pdo_mysql/modules
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6304739Z #7 8.412 ----------------------------------------------------------------------
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6305089Z #7 8.412 Libraries have been installed in:
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6305345Z #7 8.412    /usr/src/php/ext/pdo_mysql/modules
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6305601Z #7 8.412 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6305849Z #7 8.412 If you ever happen to want to link against installed libraries
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6306213Z #7 8.412 in a given directory, LIBDIR, you must either use libtool, and
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6306582Z #7 8.412 specify the full pathname of the library, or use the `-LLIBDIR'
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6306941Z #7 8.412 flag during linking and do at least one of the following:
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6307291Z #7 8.412    - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6307591Z #7 8.412      during execution
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6307840Z #7 8.412    - add LIBDIR to the `LD_RUN_PATH' environment variable
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6308123Z #7 8.412      during linking
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6308370Z #7 8.412    - use the `-Wl,--rpath -Wl,LIBDIR' linker flag
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6308893Z #7 8.412    - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6309211Z #7 8.412 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6309468Z #7 8.412 See any operating system documentation about shared libraries for
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6309878Z #7 8.412 more information, such as the ld(1) and ld.so(8) manual pages.
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6310242Z #7 8.413 ----------------------------------------------------------------------
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6310525Z #7 8.414 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6310709Z #7 8.415 Build complete.
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6310913Z #7 8.416 Don't forget to run 'make test'.
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6311133Z #7 8.417 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6311321Z #7 8.429 + strip --strip-all modules/pdo_mysql.so
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6311736Z #7 8.446 Installing shared extensions:     /usr/local/lib/php/extensions/no-debug-non-zts-20220829/
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.6312161Z #7 8.496 find . -name \*.gcno -o -name \*.gcda | xargs rm -f
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.7994895Z #7 8.499 find . -name \*.lo -o -name \*.o -o -name \*.dep | xargs rm -f
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.7995284Z #7 8.502 find . -name \*.la -o -name \*.a | xargs rm -f
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.7995468Z #7 8.505 find . -name \*.so | xargs rm -f
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.7996089Z #7 8.508 find . -name .libs -a -type d|xargs rm -rf
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.7996286Z #7 8.511 rm -f libphp.la      modules/* libs/*
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.7996466Z #7 8.512 rm -f ext/opcache/jit/zend_jit_x86.c
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.7996644Z #7 8.513 rm -f ext/opcache/jit/zend_jit_arm64.c
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:34.7996811Z #7 8.514 rm -f ext/opcache/minilua
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.8603743Z #7 DONE 15.7s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9863204Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9863879Z #8 exporting to image
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9864176Z #8 exporting layers 0.0s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9864635Z #8 exporting manifest sha256:61fc0972121c62366c744179b6bda0c1577e254fec7a8c40e57abba9d330b28b 0.0s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9865258Z #8 exporting config sha256:b190f3b28e10ec78286fea366dced6f050e2f98627b43d8b9916a8473e54db47 done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9866232Z #8 exporting attestation manifest sha256:fc334ebfc2fc8c8684a15b4bd18669369b46c98f2172ed64ce49e7af102899e7 done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9866781Z #8 exporting manifest list sha256:49e9fc11d2fdc9ea0f4ea37ed377a3102eb64a809c2e9e94ecb234dba5e341e7 done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9867199Z #8 naming to docker.io/library/pkhosting-backup-demo-web:latest done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9867534Z #8 unpacking to docker.io/library/pkhosting-backup-demo-web:latest 0.0s done
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9867903Z #8 DONE 0.1s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9868005Z 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9868084Z #9 resolving provenance for metadata file
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9962371Z #9 DONE 0.0s
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9962732Z  Image pkhosting-backup-demo-web Built 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:41.9983878Z  Network pkhosting-backup-demo_default Creating 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.0236718Z  Network pkhosting-backup-demo_default Created 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.0240584Z  Volume pkhosting-backup-demo_db_data Creating 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.0252386Z  Volume pkhosting-backup-demo_db_data Created 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.0262871Z  Container pkhosting-db Creating 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.0692275Z  Container pkhosting-db Created 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.0692666Z  Container pkhosting-web Creating 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.0915147Z  Container pkhosting-web Created 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.1042348Z  Container pkhosting-db Starting 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.2736333Z  Container pkhosting-db Started 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:42.2737746Z  Container pkhosting-db Waiting 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:52.7751636Z  Container pkhosting-db Healthy 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:52.7752019Z  Container pkhosting-web Starting 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:52.8928272Z  Container pkhosting-web Started 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:52.8928964Z  Container pkhosting-web Waiting 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:52.8929133Z  Container pkhosting-db Waiting 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:53.3940494Z  Container pkhosting-db Healthy 
+proof	Start the sample stack (Docker Compose)	2026-11-06T11:28:53.3941199Z  Container pkhosting-web Healthy 
+proof	Show the site and move the visit counter	﻿2026-11-06T11:28:53.4028409Z ##[group]Run curl -s http://localhost:8080 | head -20
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4029055Z ^[[36;1mcurl -s http://localhost:8080 | head -20^[[0m
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4029247Z ^[[36;1mcurl -s http://localhost:8080 > /dev/null^[[0m
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4029425Z ^[[36;1mcurl -s http://localhost:8080 > /dev/null^[[0m
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4029612Z ^[[36;1mcurl -s http://localhost:8080 > /dev/null^[[0m
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4029789Z ^[[36;1mecho "Visit count after 4 page loads:"^[[0m
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4030098Z ^[[36;1mdocker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT visit_count FROM stats WHERE id=1;" sample_site^[[0m
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4073846Z shell: /usr/bin/bash -e {0}
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4073996Z env:
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4074193Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4074401Z ##[endgroup]
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4308242Z <!DOCTYPE html>
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4314216Z <html lang="en">
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4314411Z <head>
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4314622Z     <meta charset="UTF-8">
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4315007Z     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4315342Z     <title>PKHosting Sample Site</title>
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4315572Z     <style>
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4315785Z         * { box-sizing: border-box; margin: 0; padding: 0; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4316575Z         body { font-family: system-ui, -apple-system, sans-serif; background: #f4f6f8; color: #222; line-height: 1.6; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4317085Z         header { background: #0d6efd; color: white; padding: 1.5rem 2rem; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4317418Z         header h1 { font-size: 1.6rem; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4317682Z         header p { opacity: 0.9; font-size: 0.95rem; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4318008Z         .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4318644Z         .card { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4319159Z         .card h2 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #0d6efd; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4319427Z         .meta { font-size: 0.85rem; color: #666; margin-bottom: 0.75rem; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4319658Z         .stats { background: #e7f1ff; border-left: 4px solid #0d6efd; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4319911Z         footer { text-align: center; padding: 2rem; color: #888; font-size: 0.9rem; }
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4320183Z     </style>
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4320350Z </head>
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4575034Z Visit count after 4 page loads:
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.4990843Z mysql: [Warning] Using a password on the command line interface can be insecure.
+proof	Show the site and move the visit counter	2026-11-06T11:28:53.5013242Z 4
+proof	Create backup config	﻿2026-11-06T11:28:53.5075232Z ##[group]Run cp config/backup.conf.example config/backup.conf
+proof	Create backup config	2026-11-06T11:28:53.5075530Z ^[[36;1mcp config/backup.conf.example config/backup.conf^[[0m
+proof	Create backup config	2026-11-06T11:28:53.5075833Z ^[[36;1msed -i "s|^BACKUP_ROOT=.*|BACKUP_ROOT=\"$GITHUB_WORKSPACE/pkhosting-backups\"|" config/backup.conf^[[0m
+proof	Create backup config	2026-11-06T11:28:53.5076156Z ^[[36;1msed -i "s|^ALERT_WEBHOOK=.*|ALERT_WEBHOOK=\"$WEBHOOK_URL\"|" config/backup.conf^[[0m
+proof	Create backup config	2026-11-06T11:28:53.5076377Z ^[[36;1mcat config/backup.conf^[[0m
+proof	Create backup config	2026-11-06T11:28:53.5120036Z shell: /usr/bin/bash -e {0}
+proof	Create backup config	2026-11-06T11:28:53.5120192Z env:
+proof	Create backup config	2026-11-06T11:28:53.5120405Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	Create backup config	2026-11-06T11:28:53.5120625Z ##[endgroup]
+proof	Create backup config	2026-11-06T11:28:53.5242005Z # PKHosting Backup Configuration
+proof	Create backup config	2026-11-06T11:28:53.5242291Z # Copy this file to backup.conf and adjust values for your environment.
+proof	Create backup config	2026-11-06T11:28:53.5242524Z # NEVER commit backup.conf (it may contain credentials).
+proof	Create backup config	2026-11-06T11:28:53.5242653Z 
+proof	Create backup config	2026-11-06T11:28:53.5242748Z # ---------- Paths ----------
+proof	Create backup config	2026-11-06T11:28:53.5243006Z # Where backups will be stored (should be on a different disk/volume if possible)
+proof	Create backup config	2026-11-06T11:28:53.5243323Z BACKUP_ROOT="/home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backups"
+proof	Create backup config	2026-11-06T11:28:53.5243525Z 
+proof	Create backup config	2026-11-06T11:28:53.5243599Z # Path to the website files that should be backed up.
+proof	Create backup config	2026-11-06T11:28:53.5243797Z # Leave empty to use the sample site inside this project.
+proof	Create backup config	2026-11-06T11:28:53.5243965Z SITE_ROOT=""
+proof	Create backup config	2026-11-06T11:28:53.5244035Z 
+proof	Create backup config	2026-11-06T11:28:53.5244091Z # How many successful backups to keep
+proof	Create backup config	2026-11-06T11:28:53.5244241Z RETENTION_COUNT=7
+proof	Create backup config	2026-11-06T11:28:53.5244316Z 
+proof	Create backup config	2026-11-06T11:28:53.5244374Z # ---------- Database ----------
+proof	Create backup config	2026-11-06T11:28:53.5244568Z DB_CONTAINER="pkhosting-db"          # Docker container name (preferred)
+proof	Create backup config	2026-11-06T11:28:53.5244806Z DB_HOST="127.0.0.1"                  # Used only if container is not running
+proof	Create backup config	2026-11-06T11:28:53.5244988Z DB_PORT="3307"
+proof	Create backup config	2026-11-06T11:28:53.5245105Z DB_NAME="sample_site"
+proof	Create backup config	2026-11-06T11:28:53.5245225Z DB_USER="siteuser"
+proof	Create backup config	2026-11-06T11:28:53.5245365Z DB_PASS="sitepass123"
+proof	Create backup config	2026-11-06T11:28:53.5245440Z 
+proof	Create backup config	2026-11-06T11:28:53.5245495Z # ---------- Alerts ----------
+proof	Create backup config	2026-11-06T11:28:53.5245639Z # Leave empty to disable that method
+proof	Create backup config	2026-11-06T11:28:53.5245809Z ALERT_EMAIL=""                       # e.g. admin@example.com
+proof	Create backup config	2026-11-06T11:28:53.5246068Z ALERT_WEBHOOK="https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a"
+proof	Make the scripts executable	﻿2026-11-06T11:28:53.5269742Z ##[group]Run chmod +x scripts/backup.sh scripts/restore.sh scripts/alert.sh
+proof	Make the scripts executable	2026-11-06T11:28:53.5270049Z ^[[36;1mchmod +x scripts/backup.sh scripts/restore.sh scripts/alert.sh^[[0m
+proof	Make the scripts executable	2026-11-06T11:28:53.5312885Z shell: /usr/bin/bash -e {0}
+proof	Make the scripts executable	2026-11-06T11:28:53.5313041Z env:
+proof	Make the scripts executable	2026-11-06T11:28:53.5313240Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	Make the scripts executable	2026-11-06T11:28:53.5313446Z ##[endgroup]
+proof	RUN 1 - timed backup	﻿2026-11-06T11:28:53.5422810Z ##[group]Run time ./scripts/backup.sh
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5423022Z ^[[36;1mtime ./scripts/backup.sh^[[0m
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5423166Z ^[[36;1mecho "backup exit: $?"^[[0m
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5423338Z ^[[36;1mls -la "$GITHUB_WORKSPACE/pkhosting-backups/"^[[0m
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5423586Z ^[[36;1mcat "$GITHUB_WORKSPACE/pkhosting-backups/pkhosting_backup_"*/metadata.txt^[[0m
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5423922Z ^[[36;1mecho "Posts at backup time:"^[[0m
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5424290Z ^[[36;1mdocker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT COUNT(*) FROM posts;" sample_site^[[0m
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5424573Z ^[[36;1mecho "Visit count at backup time:"^[[0m
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5424867Z ^[[36;1mdocker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT visit_count FROM stats WHERE id=1;" sample_site^[[0m
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5468337Z shell: /usr/bin/bash -e {0}
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5468498Z env:
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5468869Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5469131Z ##[endgroup]
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5762467Z [2026-11-06 11:28:53] === Starting PKHosting backup: pkhosting_backup_20261106_112853 ===
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5817684Z [2026-11-06 11:28:53] Backing up website files from /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backup-demo/sample-site ...
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.5977430Z [2026-11-06 11:28:53] Files backup complete: 4.0K
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.6029047Z [2026-11-06 11:28:53] Backing up MySQL database 'sample_site' ...
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.6670071Z mysqldump: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.6942490Z [2026-11-06 11:28:53] Database backup complete: 4.0K
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.8550224Z [2026-11-06 11:28:53] Database content at backup time: 3 posts, visit count 4
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.8747315Z [2026-11-06 11:28:53] Metadata written.
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.8802599Z [2026-11-06 11:28:53] Applying retention policy (keep last 7 backups) ...
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.8912954Z [2026-11-06 11:28:53] Found 1 backups. No cleanup needed.
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.8971789Z [2026-11-06 11:28:53] === Backup completed successfully: pkhosting_backup_20261106_112853 ===
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9030782Z [2026-11-06 11:28:53] Location: /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backups/pkhosting_backup_20261106_112853
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9034326Z 
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9034664Z Backup successful: /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backups/pkhosting_backup_20261106_112853
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9037501Z 
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9037680Z real	0m0.351s
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9037864Z user	0m0.070s
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9038035Z sys	0m0.161s
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9039410Z backup exit: 0
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9067063Z total 16
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9067215Z drwxr-xr-x 3 runner runner 4096 Nov  6 11:28 .
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9067425Z drwxr-xr-x 6 runner runner 4096 Nov  6 11:28 ..
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9067629Z -rw-r--r-- 1 runner runner  900 Nov  6 11:28 backup.log
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9067917Z drwxr-xr-x 2 runner runner 4096 Nov  6 11:28 pkhosting_backup_20261106_112853
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9091016Z Backup Name:    pkhosting_backup_20261106_112853
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9091319Z Timestamp:      2026-11-06T11:28:53+00:00
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9091554Z Host:           runnervmwuk1x
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9091871Z Site Root:      /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backup-demo/sample-site
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9092158Z Database:       sample_site
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9092299Z Files Size:     4.0K
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9092423Z DB Size:        4.0K
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9092540Z Posts:          3
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9092654Z Visit count:    4
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9094720Z Posts at backup time:
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9475966Z mysql: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9499518Z 3
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9533762Z Visit count at backup time:
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9930344Z mysql: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 1 - timed backup	2026-11-06T11:28:53.9956432Z 4
+proof	RUN 2 - timed restore with verification	﻿2026-11-06T11:28:54.0023483Z ##[group]Run docker exec pkhosting-db mysql -usiteuser -psitepass123 -e "DELETE FROM posts WHERE id=3;" sample_site
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0023988Z ^[[36;1mdocker exec pkhosting-db mysql -usiteuser -psitepass123 -e "DELETE FROM posts WHERE id=3;" sample_site^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0024303Z ^[[36;1mecho "Posts after deliberate DELETE (expect 2):"^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0024615Z ^[[36;1mdocker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT COUNT(*) FROM posts;" sample_site^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0024977Z ^[[36;1mB=$(ls "$GITHUB_WORKSPACE/pkhosting-backups/" | grep pkhosting_backup_ | head -n 1)^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0025228Z ^[[36;1mecho "Restoring backup: $B"^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0025416Z ^[[36;1mtime ./scripts/restore.sh "$B" <<< "yes"^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0025588Z ^[[36;1mecho "restore exit: $?"^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0025755Z ^[[36;1mecho "Posts after restore (expect 3):"^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0026041Z ^[[36;1mdocker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT COUNT(*) FROM posts;" sample_site^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0026401Z ^[[36;1mecho "Visit count after restore (expect the backup-time value):"^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0026755Z ^[[36;1mdocker exec pkhosting-db mysql -usiteuser -psitepass123 -N -e "SELECT visit_count FROM stats WHERE id=1;" sample_site^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0027063Z ^[[36;1mecho "File check (expect FILES-MATCH):"^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0027464Z ^[[36;1mdiff <(tar -tzf "$GITHUB_WORKSPACE/pkhosting-backups/$B/files.tar.gz" | grep -v '/$' | sort) <(cd sample-site && find . -type f | sed 's|^\./|sample-site/|' | sort) && echo FILES-MATCH^[[0m
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0071605Z shell: /usr/bin/bash -e {0}
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0071792Z env:
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0071986Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0072209Z ##[endgroup]
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0525100Z mysql: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0594130Z Posts after deliberate DELETE (expect 2):
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.0987861Z mysql: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1013594Z 2
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1100130Z Restoring backup: pkhosting_backup_20261106_112853
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1188980Z 
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1189597Z You are about to restore:
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1189928Z   Backup : pkhosting_backup_20261106_112853
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1190435Z   Target : /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backup-demo/sample-site
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1190996Z   Database: sample_site
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1191133Z 
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1251674Z [2026-11-06 11:28:54] === Starting restore from pkhosting_backup_20261106_112853 ===
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1281511Z [2026-11-06 11:28:54] Restoring website files ...
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1346471Z [2026-11-06 11:28:54] Creating safety copy of current site at /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backup-demo/sample-site.pre-restore.20261106_112854
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1483467Z [2026-11-06 11:28:54] Files restored.
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.1520609Z [2026-11-06 11:28:54] Restoring MySQL database ...
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.2183793Z mysql: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.2711848Z mysql: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.3136282Z [2026-11-06 11:28:54] Database restored.
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.3169900Z [2026-11-06 11:28:54] Verifying restore ...
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4679229Z [2026-11-06 11:28:54] Posts: expected=3 restored=3
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4713731Z [2026-11-06 11:28:54] Visit count: expected=4 restored=4
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4747506Z [2026-11-06 11:28:54] Database check: OK (row counts match the backup)
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4839848Z [2026-11-06 11:28:54] Files check: OK (restored file list matches the backup archive)
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4909011Z [2026-11-06 11:28:54] === Restore completed successfully in 0 seconds ===
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4909305Z 
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4909368Z Restore finished.
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4910008Z   Backup used : pkhosting_backup_20261106_112853
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4910232Z   Duration    : 0 seconds
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4910596Z   Site path   : /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backup-demo/sample-site
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4910875Z 
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4911017Z You can now verify the site (e.g. http://localhost:8080).
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4912999Z 
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4913237Z restore exit: 0
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4913482Z real	0m0.381s
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4913675Z user	0m0.068s
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4913851Z sys	0m0.153s
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.4915716Z Posts after restore (expect 3):
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.5336480Z mysql: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.5361590Z 3
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.5400193Z Visit count after restore (expect the backup-time value):
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.5790177Z mysql: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.5813192Z 4
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.5850726Z File check (expect FILES-MATCH):
+proof	RUN 2 - timed restore with verification	2026-11-06T11:28:54.5909183Z FILES-MATCH
+proof	RUN 3 - prune to 7	﻿2026-11-06T11:28:54.5936026Z ##[group]Run cd "$GITHUB_WORKSPACE/pkhosting-backups"
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5936297Z ^[[36;1mcd "$GITHUB_WORKSPACE/pkhosting-backups"^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5936805Z ^[[36;1mfor d in 20261028_020000 20261029_020000 20261030_020000 20261031_020000 20261101_020000 20261102_020000 20261103_020000 20261104_020000 20261105_020000; do mkdir -p "pkhosting_backup_$d"; echo "old backup $d" > "pkhosting_backup_$d/metadata.txt"; done^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5937308Z ^[[36;1mecho "Backups before prune (expect 10):"^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5937504Z ^[[36;1mls -d pkhosting_backup_* | wc -l^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5937687Z ^[[36;1mcd "$GITHUB_WORKSPACE/pkhosting-backup-demo"^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5937863Z ^[[36;1m./scripts/backup.sh^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5938006Z ^[[36;1mecho "backup exit: $?"^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5938162Z ^[[36;1mecho "Backups after prune (expect 7):"^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5938395Z ^[[36;1mls -d "$GITHUB_WORKSPACE/pkhosting-backups/pkhosting_backup_"* | wc -l^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5939155Z ^[[36;1mls "$GITHUB_WORKSPACE/pkhosting-backups/"^[[0m
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5982018Z shell: /usr/bin/bash -e {0}
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5982185Z env:
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5982387Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.5982609Z ##[endgroup]
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.6263781Z Backups before prune (expect 10):
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.6291584Z 10
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.6520894Z [2026-11-06 11:28:54] === Starting PKHosting backup: pkhosting_backup_20261106_112854 ===
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.6582324Z [2026-11-06 11:28:54] Backing up website files from /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backup-demo/sample-site ...
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.6769100Z [2026-11-06 11:28:54] Files backup complete: 4.0K
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.6831727Z [2026-11-06 11:28:54] Backing up MySQL database 'sample_site' ...
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.7501306Z mysqldump: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.7760886Z [2026-11-06 11:28:54] Database backup complete: 4.0K
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.9413228Z [2026-11-06 11:28:54] Database content at backup time: 3 posts, visit count 4
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.9597410Z [2026-11-06 11:28:54] Metadata written.
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.9650345Z [2026-11-06 11:28:54] Applying retention policy (keep last 7 backups) ...
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.9752355Z [2026-11-06 11:28:54] Found 11 backups. Removing oldest 4 ...
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.9816934Z [2026-11-06 11:28:54]   Deleting: /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backups/pkhosting_backup_20261028_020000
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.9889935Z [2026-11-06 11:28:54]   Deleting: /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backups/pkhosting_backup_20261029_020000
+proof	RUN 3 - prune to 7	2026-11-06T11:28:54.9961762Z [2026-11-06 11:28:54]   Deleting: /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backups/pkhosting_backup_20261030_020000
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0029789Z [2026-11-06 11:28:54]   Deleting: /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backups/pkhosting_backup_20261031_020000
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0097671Z [2026-11-06 11:28:55] === Backup completed successfully: pkhosting_backup_20261106_112854 ===
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0155128Z [2026-11-06 11:28:55] Location: /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backups/pkhosting_backup_20261106_112854
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0158289Z 
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0158734Z Backup successful: /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backups/pkhosting_backup_20261106_112854
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0161605Z backup exit: 0
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0161819Z Backups after prune (expect 7):
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0188249Z 7
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0212655Z backup.log
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0212879Z pkhosting_backup_20261101_020000
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0213107Z pkhosting_backup_20261102_020000
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0213271Z pkhosting_backup_20261103_020000
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0213413Z pkhosting_backup_20261104_020000
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0213548Z pkhosting_backup_20261105_020000
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0214055Z pkhosting_backup_20261106_112853
+proof	RUN 3 - prune to 7	2026-11-06T11:28:55.0214192Z pkhosting_backup_20261106_112854
+proof	RUN 4 - failed backup, alert must arrive	﻿2026-11-06T11:28:55.0322425Z ##[group]Run sed -i 's/^DB_PASS="sitepass123"/DB_PASS="wrongpass"/' config/backup.conf
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0322814Z ^[[36;1msed -i 's/^DB_PASS="sitepass123"/DB_PASS="wrongpass"/' config/backup.conf^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0323046Z ^[[36;1mgrep '^DB_PASS' config/backup.conf^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0323206Z ^[[36;1mset +e^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0323349Z ^[[36;1m./scripts/backup.sh^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0323507Z ^[[36;1mecho "failed-backup exit (expect 1): $?"^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0323674Z ^[[36;1mset -e^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0323857Z ^[[36;1msed -i 's/^DB_PASS="wrongpass"/DB_PASS="sitepass123"/' config/backup.conf^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0324088Z ^[[36;1mecho "Backups still 7 (partial dir cleaned):"^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0324334Z ^[[36;1mls -d "$GITHUB_WORKSPACE/pkhosting-backups/pkhosting_backup_"* | wc -l^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0324563Z ^[[36;1mecho "Alert lines in backup.log:"^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0324773Z ^[[36;1mgrep -i "ALERT" "$GITHUB_WORKSPACE/pkhosting-backups/backup.log"^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0325008Z ^[[36;1msleep 5^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0325186Z ^[[36;1mecho "Requests that arrived at the webhook inbox (expect 1 alert):"^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0325831Z ^[[36;1mcurl -s "https://webhook.site/token/94c65dfa-9794-48fb-ba84-f3a5d9df912a/requests" | python3 -c "import json,sys; d=json.load(sys.stdin); print('total:', d.get('total', len(d.get('data', [])))); [print(r.get('method'), r.get('created_at'), (r.get('content') or '')[:200]) for r in d.get('data', [])]"^[[0m
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0368272Z shell: /usr/bin/bash -e {0}
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0368429Z env:
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0368783Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0369016Z ##[endgroup]
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0461081Z DB_PASS="wrongpass"
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0688296Z [2026-11-06 11:28:55] === Starting PKHosting backup: pkhosting_backup_20261106_112855 ===
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0747066Z [2026-11-06 11:28:55] Backing up website files from /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo/pkhosting-backup-demo/sample-site ...
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0912278Z [2026-11-06 11:28:55] Files backup complete: 4.0K
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.0965175Z [2026-11-06 11:28:55] Backing up MySQL database 'sample_site' ...
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.1594311Z mysqldump: [Warning] Using a password on the command line interface can be insecure.
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.1625704Z mysqldump: Got error: 1045: Access denied for user 'siteuser'@'localhost' (using password: YES) when trying to connect
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.1727153Z [2026-11-06 11:28:55] ERROR: mysqldump via docker failed
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.5937593Z Alert recorded: PKHosting Backup FAILED
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.5952373Z failed-backup exit (expect 1): 1
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.5998392Z Backups still 7 (partial dir cleaned):
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.6026212Z 7
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.6030168Z Alert lines in backup.log:
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.6040708Z [2026-11-06 11:28:55] ALERT: Webhook notification sent
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:28:55.6041143Z [2026-11-06 11:28:55] ALERT: PKHosting Backup FAILED | mysqldump via docker failed
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:29:00.6072899Z Requests that arrived at the webhook inbox (expect 1 alert):
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:29:01.1579636Z total: 1
+proof	RUN 4 - failed backup, alert must arrive	2026-11-06T11:29:01.1580096Z POST 2026-11-06 11:28:55 {"text":"*PKHosting Backup FAILED*\nmysqldump via docker failed"}
+proof	RUN 5 - cron line install	﻿2026-11-06T11:29:01.1646847Z ##[group]Run (crontab -l 2>/dev/null; echo "15 2 * * * $GITHUB_WORKSPACE/pkhosting-backup-demo/scripts/backup.sh >> $GITHUB_WORKSPACE/pkhosting-backups/cron.log 2>&1") | crontab -
+proof	RUN 5 - cron line install	2026-11-06T11:29:01.1647553Z ^[[36;1m(crontab -l 2>/dev/null; echo "15 2 * * * $GITHUB_WORKSPACE/pkhosting-backup-demo/scripts/backup.sh >> $GITHUB_WORKSPACE/pkhosting-backups/cron.log 2>&1") | crontab -^[[0m
+proof	RUN 5 - cron line install	2026-11-06T11:29:01.1647934Z ^[[36;1mecho "crontab exit: $?"^[[0m
+proof	RUN 5 - cron line install	2026-11-06T11:29:01.1648090Z ^[[36;1mcrontab -l^[[0m
+proof	RUN 5 - cron line install	2026-11-06T11:29:01.1689852Z shell: /usr/bin/bash -e {0}
+proof	RUN 5 - cron line install	2026-11-06T11:29:01.1690004Z env:
+proof	RUN 5 - cron line install	2026-11-06T11:29:01.1690208Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	RUN 5 - cron line install	2026-11-06T11:29:01.1690435Z ##[endgroup]
+proof	RUN 5 - cron line install	2026-11-06T11:29:01.2247612Z crontab exit: 0
+proof	Upload run logs as artifacts	﻿2026-11-06T11:29:01.2302622Z ##[group]Run actions/upload-artifact@v4
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2302798Z with:
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2302925Z   name: backup-proof-logs
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2303154Z   path: pkhosting-backups/backup.log
+proof	Upload run logs as artifacts	pkhosting-backups/pkhosting_backup_*/metadata.txt
+proof	Upload run logs as artifacts	
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2303419Z   if-no-files-found: warn
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2303555Z   compression-level: 6
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2303686Z   overwrite: false
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2303818Z   include-hidden-files: false
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2303952Z env:
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2304134Z   WEBHOOK_URL: https://webhook.site/94c65dfa-9794-48fb-ba84-f3a5d9df912a
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.2304345Z ##[endgroup]
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.3506379Z (node:9314) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.3506962Z (Use `node --trace-deprecation ...` to show where the warning was created)
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.3582578Z With the provided path, there will be 8 files uploaded
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.3588179Z Artifact name is valid!
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.3588854Z Root directory input is valid!
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.6814215Z Beginning upload of artifact content to blob storage
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.7035691Z (node:9314) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.8629129Z Uploaded bytes 2453
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.9111901Z Finished uploading artifact content to blob storage!
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.9112481Z SHA256 digest of uploaded artifact zip is bbed493b8f048afbe0df49c59764da69c5649efb54f6e69970ffd05a46fe08b8
+proof	Upload run logs as artifacts	2026-11-06T11:29:01.9113483Z Finalizing artifact upload
+proof	Upload run logs as artifacts	2026-11-06T11:29:02.3924062Z Artifact backup-proof-logs.zip successfully finalized. Artifact ID 13498414048
+proof	Upload run logs as artifacts	2026-11-06T11:29:02.3924783Z Artifact backup-proof-logs has been successfully uploaded! Final size is 2453 bytes. Artifact ID is 13498414048
+proof	Upload run logs as artifacts	2026-11-06T11:29:02.3929818Z Artifact download URL: https://github.com/pakmultilinks-dot/pkhosting-backup-demo/actions/runs/42210470035/artifacts/13498414048
+proof	Post Check out	﻿2026-11-06T11:29:02.4112562Z Post job cleanup.
+proof	Post Check out	2026-11-06T11:29:02.4752204Z [command]/usr/bin/git version
+proof	Post Check out	2026-11-06T11:29:02.4796714Z git version 2.56.0
+proof	Post Check out	2026-11-06T11:29:02.4822799Z Temporarily overriding HOME='/home/runner/work/_temp/5d92160e-10d0-4ea4-a4ae-077ffd776cd3' before making global git config changes
+proof	Post Check out	2026-11-06T11:29:02.4823707Z Adding repository directory to the temporary git global config as a safe directory
+proof	Post Check out	2026-11-06T11:29:02.4826574Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pkhosting-backup-demo/pkhosting-backup-demo
+proof	Post Check out	2026-11-06T11:29:02.4867091Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+proof	Post Check out	2026-11-06T11:29:02.4903681Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+proof	Post Check out	2026-11-06T11:29:02.5200029Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+proof	Post Check out	2026-11-06T11:29:02.5214089Z http.https://github.com/.extraheader
+proof	Post Check out	2026-11-06T11:29:02.5227737Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+proof	Post Check out	2026-11-06T11:29:02.5272588Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+proof	Post Check out	2026-11-06T11:29:02.5536130Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+proof	Post Check out	2026-11-06T11:29:02.5566239Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+proof	Complete job	﻿2026-11-06T11:29:02.5930108Z Cleaning up orphan processes
+proof	Complete job	2026-11-06T11:29:02.6321989Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
