@@ -1,3 +1,5 @@
+# Round 6 fix: set scripts executable in CI before the proof runs
+
 name: Backup proof run
 
 on:
@@ -42,6 +44,10 @@ jobs:
           sed -i "s|^BACKUP_ROOT=.*|BACKUP_ROOT=\"$GITHUB_WORKSPACE/pkhosting-backups\"|" config/backup.conf
           sed -i "s|^ALERT_WEBHOOK=.*|ALERT_WEBHOOK=\"$WEBHOOK_URL\"|" config/backup.conf
           cat config/backup.conf
+
+      - name: Make the scripts executable
+        working-directory: pkhosting-backup-demo
+        run: chmod +x scripts/backup.sh scripts/restore.sh scripts/alert.sh
 
       - name: RUN 1 - timed backup
         working-directory: pkhosting-backup-demo
